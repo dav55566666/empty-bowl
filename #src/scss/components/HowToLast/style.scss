@@ -1,0 +1,63 @@
+.become-therapist {
+  width: 100%;
+  .become-therapist__container {
+    margin-bottom: 100px;
+    .how-to-center-text-all {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .how-to-center__bottom {
+        h4 {
+          color: #eee1d2;
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 130%;
+          text-transform: uppercase;
+          font-family: Mulish;
+          max-width: 764px;
+          margin-bottom: 20px;
+        }
+        .how-to-text1 {
+          display: flex;
+          flex-direction: column;
+          color: #e0d0c0;
+          max-width: 794px;
+          font-size: 20px;
+          font-family: Mulish;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 145%;
+          letter-spacing: -0.4px;
+          margin-bottom: 80px;
+          span {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+
+        a {
+          border-radius: 5px;
+          border: 1px solid #fff;
+          background: radial-gradient(
+              230.39% 104.71% at 0% 106.25%,
+              rgba(211, 131, 73, 0.2) 0%,
+              rgba(255, 254, 253, 0.2) 100%
+            ),
+            linear-gradient(95deg, #fcdfca 0.01%, #f8c9a8 100.47%);
+          box-shadow: 0px 10px 20px 0px rgba(26, 20, 16, 0.15);
+          padding: 24px 30px;
+          color: #1a1410;
+          font-family: Mulish;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%;
+          letter-spacing: 0.48px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.how-to {
+  width: 100%;
+  .how-to__container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+    h1 {
+      color: #eee1d2;
+      font-size: 72px;
+      font-weight: 900;
+      font-family: Mulish;
+      letter-spacing: -1.44px;
+      font-style: normal;
+      max-width: 712px;
+      text-align: center;
+    }
+    img{
+        max-width:720px ;
+        height: 250px;
+    }
+  }
+}

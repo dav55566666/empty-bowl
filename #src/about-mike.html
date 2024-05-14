@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./scss/components/Header/_head.html',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('./scss/components/Header/_header.html',{})
+			<main class="page">
+                @@include("./scss/components/AboutMain/_index.html", {})
+				@@include("./scss/components/AboutMike/_index.html", {})
+				@@include("./scss/components/AboutLife/_index.html", {})
+				@@include("./scss/components/AboutEarth/_index.html", {})
+				@@include("./scss/components/AboutMore/_index.html", {})
+				@@include("./scss/components/AboutGallery/_index.html", {})
+				@@include("./scss/components/AboutKnowMore/_index.html", {})
+				@@include("./scss/components/Aboutblockquote/_index.html", {})
+
+			</main>
+			@@include('./scss/components/Footer/_footer.html',{})
+		</div>
+		@@include('./scss/components/Footer/_js.html',{})
+	</body>
+</html>

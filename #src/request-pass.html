@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./scss/components/Header/_head.html',{ "title":"Главная" })
+
+<body>
+    <div class="wrapper">
+        @@include('./scss/components/Header/_header.html',{})
+        <main class="page">
+            @@include("./scss/components/RequestPass/_index.html", {})
+        </main>
+    </div>
+    @@include('./scss/components/Footer/_js.html',{})
+</body>
+
+</html>

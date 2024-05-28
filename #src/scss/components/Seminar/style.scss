@@ -1,0 +1,153 @@
+.seminar {
+  width: 100%;
+  padding: 100px 20px 0;
+  .seminar__container {
+    max-width: 800px;
+    @media(max-width: 768px) {
+      max-width: 440px;
+    }
+    .seminar-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 40px;
+      .seminar__title-icon {
+        position: relative;
+        h1 {
+          color: var(--h-1, #eee1d2);
+          text-align: center;
+          font-family: Mulish;
+          font-size: 130px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 90%;
+          letter-spacing: -2.6px;
+          text-transform: uppercase;
+          @media(max-width: 1200px) {font-size: 108px;}
+          @media(max-width: 1024px) {font-size: 88px;}
+          @media(max-width: 768px) {font-size: 80px;}
+          @media(max-width: 520px) {font-size: 50px;}
+        }
+        .bg_img {
+          position: absolute;
+          &:nth-child(1) {
+            top: -25px;
+            left: -22px;
+            @media(max-width: 768px) {
+              width: 30px;
+              height: 30px;
+              top: 0;
+            }
+          }
+          &:nth-child(2) {
+            bottom: -11px;
+            right: -32px;
+            filter: blur(2px);
+            @media(max-width: 768px) {
+              width: 30px;
+              height: 30px;
+              bottom: 0;
+            }
+          }
+        }
+      }
+
+      p {
+        color: var(--h-1, #eee1d2);
+        text-align: center;
+        max-width: 590px;
+        font-family: Mulish;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        @media(max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+    .seminar__info-top {
+      margin-top: 150px;
+      @media(max-width: 768px){
+        margin-bottom: 100px;
+      }
+      h2 {
+        margin-bottom: 40px;
+        color: var(--h-1, #eee1d2);
+        font-family: Mulish;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        @media(max-width: 768px) {
+          font-size: 28px;
+        }
+      }
+
+      .seminar__info-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        @media(max-width: 768px) {
+          flex-direction: column-reverse;
+        }
+        img {
+          max-width: 285px;
+          height: 406px;
+          object-fit: cover;
+        }
+
+        p {
+          max-width: 489px;
+          color: var(--h-2, #e0d0c0);
+          font-family: Mulish;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 145%;
+          letter-spacing: -0.4px;
+          @media(max-width: 768px) {
+            max-width: unset;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .seminar__info-bottom {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 150px;
+      @media(max-width: 768px) {
+        margin-bottom: 100px;
+      }
+      p {
+        max-width: 794px;
+        color: var(--h-2, #e0d0c0);
+        font-family: Mulish;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+        letter-spacing: -0.4px;
+        @media(max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        max-width: 793px;
+        width: 100%;
+      }
+    }
+  }
+}

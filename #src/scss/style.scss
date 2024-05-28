@@ -25,7 +25,7 @@ $fontSize: 16;
 $minWidth: 320px;
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -37,17 +37,20 @@ $mainBackground: #fff;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
 	color: $mainColor;
 	font-size: $fontSize + px;
 	font-family: $fontFamily;
 	background: var(---Black, #1A1410);
+
 	// background-size: cover;
 	// background-repeat: no-repeat;
 	&._lock {
 		overflow: hidden;
 	}
 }
+
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -57,15 +60,20 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	&._loaded {
-	}
+
+	&._loaded {}
 }
 
 .container {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+
+	@media(max-width: 1200px) {
+		max-width: 960px;
+	}
 }
+
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
@@ -87,9 +95,62 @@ body {
 .page {
 	flex: 1 1 auto;
 }
+
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.button {
+	padding: 24px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	max-width: max-content;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+	background: radial-gradient(230.39% 104.71% at 0% 106.25%, rgba(211, 131, 73, 0.20) 0%, rgba(255, 254, 253, 0.20) 100%), linear-gradient(95deg, #FCDFCA 0.01%, #F8C9A8 100.47%);
+	box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.25);
+	transition: all 0.5s;
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(230.39% 104.71% at 0% 106.25%, rgba(211, 131, 73, 0.20) 0%, rgba(255, 254, 253, 0.20) 100%), linear-gradient(95deg, #F1CAAD 0.01%, #E2B393 100.47%);
+		opacity: 0;
+		transition: all 0.5s;
+		z-index: 1;
+	}
+	.btn-text {
+		color: #1A1410;
+		font-family: Mulish;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		max-width: max-content;
+		line-height: 110%;
+		letter-spacing: 0.48px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		position: relative;
+		z-index: 2;
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	@media(max-width: 768px) {
+		font-size: 14px;
+	}
+}
 
 @import "./components/Main/style.scss";
 @import "./components/About/style.scss";
@@ -99,14 +160,9 @@ body {
 @import "./components/Make/style.scss";
 @import "./components/SeminarAbout/style.scss";
 @import "./components/Schedule/style.scss";
+@import "./components/Seminar/style.scss";
+@import "./components/MyRoom/style.scss";
+@import "./components/Login/style.scss";
 @import "./components/PracticeEvent/style.scss";
-@import "./components/HowTo/style.scss";
-@import "./components/Kiril/style.scss";
 @import "./components/AuthorMain/style.scss";
-@import "./components/AboutLife/style.scss";
-@import "./components/AboutEarth/style.scss";
-@import "./components/AboutMore/style.scss";
-@import "./components/AboutGallery/style.scss";
-@import "./components/AboutKnowMore/style.scss";
-@import "./components/Aboutblockquote/style.scss";
-@import "./components/Author-News/style.scss";
+@import "./components/Invite/style.scss";

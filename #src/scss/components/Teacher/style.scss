@@ -1,19 +1,65 @@
 .teacher {
     width: 100%;
     padding: 0 20px 150px;
-
+    @media(max-width: 768px) {padding-bottom: 100px;}
     .teacher__container {
         max-width: 1004px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 40px;
+        position: relative;
+        @media(max-width: 1200px) {
+            max-width: 960px;
+        }
+        @media(max-width: 768px) {
+            flex-direction: column;
+            max-width: 440px;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
+        .bg-color {
+            position: absolute;
+            left: 200px;
+            top: 0px;
+            display: block;
+            width: 590px; 
+            height: 500px; 
+            transform: rotate(180deg) ; 
+            opacity: 0.30; 
+            background: linear-gradient(180deg, #FF764C 0%, #FFEFC3 100%), radial-gradient(98.52% 101.66% at 6368.51% 3886.65%, #FFEEB8 0%, rgba(255, 137.82, 137.82, 0) 100%), conic-gradient(from -23deg at 107.35% 32.55%, rgba(255, 118, 79, 0.40) 0deg, rgba(255, 240, 196, 0.40) 360deg); 
+            box-shadow: 400px 400px 400px; 
+            filter: blur(400px);
+        }
+
+        .bg-img {
+            position: absolute;
+            bottom: -140px;
+            right: 93%;
+            max-width: 330px;
+            @media(max-width: 1200px) {
+                right: unset;
+                left: -120px;
+                max-width: 224px;
+                bottom: -120px;
+            }
+            @media(max-width: 768px) {
+                bottom: unset;
+                top: 220px;
+                max-width: 150px;
+                transform: rotate(-60deg);
+                left: 60%;
+            }
+        }
+        
         .teacher__img {
             width: 100%;
             max-width: 468px;
-
-            img {
+            @media(max-width: 768px) {
+                max-width: 326px;
+            }
+            img {   
                 width: 100%;
                 border-radius: 5px;
             }
@@ -23,16 +69,19 @@
             width: 100%;
             max-width: 388px;
 
-            span {
+            .subtitle {
                 color: var(--h-2, #E0D0C0);
                 font-family: Mulish;
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 130%;
-                /* 31.2px */
                 text-transform: uppercase;
                 margin-bottom: 20px;
+                @media(max-width: 768px) {
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                }
             }
 
             h2 {
@@ -42,9 +91,11 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 130%;
-                /* 54.6px */
                 text-transform: uppercase;
                 margin-bottom: 20px;
+                @media(max-width: 768px) {
+                    font-size: 28px;
+                }
             }
 
             p {
@@ -54,30 +105,11 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 145%;
-                /* 29px */
                 letter-spacing: -0.4px;
                 margin-bottom: 40px;
-            }
-
-            a {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 64px;
-                max-width: 338px;
-                border-radius: 5px;
-                border: 1px solid #FFF;
-                background: radial-gradient(230.39% 104.71% at 0% 106.25%, rgba(211, 131, 73, 0.20) 0%, rgba(255, 254, 253, 0.20) 100%), linear-gradient(95deg, #FCDFCA 0.01%, #F8C9A8 100.47%);
-                box-shadow: 0px 10px 20px 0px rgba(26, 20, 16, 0.15);
-                color: var(---Black, #1A1410);
-                font-family: Mulish;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 100%; /* 16px */
-                letter-spacing: 0.48px;
-                text-transform: uppercase;
+                @media(max-width: 768px) {
+                    font-size: 16px;
+                }
             }
         }
     }
